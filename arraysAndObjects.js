@@ -25,3 +25,51 @@ function htmlColorNames(arr) {
   return arr;
 }
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+// extract information from the argument array and return a new array that contains the elements 'warm' and 'sunny'
+function forecast(arr) {
+  arr = arr.slice(2, 4);
+  return arr;
+}
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+// The function is supposed to return a new array made up of num copies of arr
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    newArr.push([...arr]);
+    num--;
+  }
+  return newArr;
+}
+console.log(copyMachine([true, false, true], 2));
+
+// Modify the function using the spread operator so that it returns the array ['learning', 'to', 'code', 'is', 'fun']
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning', ...fragment, 'is', 'fun'];
+  return sentence;
+}
+console.log(spreadOut());
+
+// Modify the function using indexOf() so that it returns true if the passed element exists on the array, and false if it does not
+function quickCheck(arr, elem) {
+if (arr.indexOf(elem) === -1) {
+  return false;
+  } else {
+    return true;
+  }
+}
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// Modify the function, using a for loop, to return a filtered version of the passed array such that any array nested within arr containing elem has been removed
+function filteredArray(arr, elem) {
+  let newArr = [];
+  for (let ar of arr) {
+   if (!ar.includes(elem)) {
+     newArr.push(ar);
+   }
+  }
+  return newArr;
+}
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
