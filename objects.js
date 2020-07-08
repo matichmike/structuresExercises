@@ -49,3 +49,39 @@ let foods = {
 };
 ['oranges', 'plums', 'strawberries'].forEach(elem => delete foods[elem]);
 console.log(foods);
+
+// Finish writing this function so that it returns true only if the users object contains all four names, Alan, Jeff, Sarah, and Ryan, as keys, and false otherwise
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+function isEveryoneHere(obj) {
+return ['Alan', 'Jeff', 'Sarah', 'Ryan'].every(name => obj.hasOwnProperty(name))
+}
+console.log(isEveryoneHere(users));
+
+// return the number of users whose online property is set to true
+function countOnline(usersObj) {
+  let result = 0;
+  for (let user in usersObj) {
+    if (usersObj[user].online === true) {
+      result ++;
+    }
+  }
+  return result;
+}
+
