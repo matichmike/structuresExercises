@@ -65,3 +65,24 @@ function truncateString(str, num) {
   }
 }
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
+function findElement(arr, func) {
+  return arr.find(func);
+}
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+// Check if a value is classified as a boolean primitive.
+function booWho(bool) {
+  return (typeof (bool) === 'boolean');
+}
+booWho(null);
+
+// Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+function titleCase(str) {
+  const temp = str.toLowerCase().split(" ");
+  let result = temp.map(elem => elem.replace(elem.charAt(0), elem.charAt(0).toUpperCase()))
+  return result.join(" ");
+}
+
+console.log(titleCase("I'm a little tea pot"));
