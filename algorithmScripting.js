@@ -41,3 +41,27 @@ function confirmEnding(str, target) {
   return str.slice(str.length - target.length) === target;
 }
 confirmEnding("Bastian", "n");
+
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
+function repeatStringNumTimes(str, num) {
+  if (num < 1) {
+    return "";
+  }
+  let result = "";
+  while (num > 0) {
+    result += str;
+    num --;
+  }
+  return result;
+}
+repeatStringNumTimes("abc", 3);
+
+// Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+function truncateString(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
