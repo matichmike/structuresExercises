@@ -86,3 +86,54 @@ function titleCase(str) {
 }
 
 console.log(titleCase("I'm a little tea pot"));
+
+// Insert the first array into second array starting from index n.
+function frankenSplice(arr1, arr2, n) {
+  let temp = arr2.slice();
+  temp.splice(n, 0, ...arr1);
+  return temp;
+}
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+// Remove all falsy values from an array
+function bouncer(arr) {
+  let result = [];
+  arr.map(elem => {
+    if (elem) {
+      result.push(elem);
+    }
+  })
+  return result;
+}
+bouncer([7, "ate", "", false, 9]);
+
+// Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted
+function getIndexToIns(arr, num) {
+  arr.push(num);
+  arr.sort((a, b) => a - b);
+  return arr.indexOf(num);
+}
+getIndexToIns([2, 5, 10], 15);
+
+// Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+function mutation(arr) {
+  let firstArr = arr[0].toLowerCase().split("");
+  let secondArr = arr[1].toLowerCase().split("");
+  for (let i in secondArr) {
+    if (!firstArr.includes(secondArr[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+mutation(["hello", "hey"]);
+
+// Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+function chunkArrayInGroups(arr, size) {
+  let result = [];
+  while (arr.length) {
+    result.push(arr.splice(0, size))
+  }
+  return result;
+}
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
