@@ -68,3 +68,49 @@ console.log(
   const empire = pilots.filter(pilot => pilot.faction === "Empire");
 
   console.log("Rebels - ", rebels, "Empire - ", empire);
+
+  // get the total score of force users only
+  const personnel = [
+    {
+      id: 5,
+      name: "Luke",
+      pilotingScore: 98,
+      shootingScore: 56,
+      isForceUser: true,
+    },
+    {
+      id: 82,
+      name: "Sabine",
+      pilotingScore: 73,
+      shootingScore: 99,
+      isForceUser: false,
+    },
+    {
+      id: 22,
+      name: "Zeb",
+      pilotingScore: 20,
+      shootingScore: 59,
+      isForceUser: false,
+    },
+    {
+      id: 15,
+      name: "Ezra",
+      pilotingScore: 43,
+      shootingScore: 67,
+      isForceUser: true,
+    },
+    {
+      id: 11,
+      name: "Caleb",
+      pilotingScore: 71,
+      shootingScore: 85,
+      isForceUser: true,
+    },
+  ];
+
+// const forcePersonnel = personnel.filter(person => person.isForceUser);
+// const forceScoreArr = forcePersonnel.map(jedi => jedi.pilotingScore + jedi.shootingScore);
+// const forceTotalScore = forceScoreArr.reduce((accum, score) => accum + score, 0);
+
+const result = personnel.filter(person => person.isForceUser).map(jedi => jedi.pilotingScore + jedi.shootingScore).reduce((accum, score) => accum + score, 0);
+console.log("Total score", result);
