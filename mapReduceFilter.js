@@ -39,3 +39,32 @@ console.log(
     return (oldest.years || 0) > employee.years ? oldest : employee;
   }, {})
   )
+
+  // form 2 arrays - for rebels and empire
+  const pilots = [
+    {
+      id: 2,
+      name: "Wedge",
+      faction: "Rebels",
+    },
+    {
+      id: 8,
+      name: "Ciena",
+      faction: "Empire",
+    },
+    {
+      id: 40,
+      name: "Iden",
+      faction: "Empire",
+    },
+    {
+      id: 66,
+      name: "Thane",
+      faction: "Rebels",
+    }
+  ];
+
+  const rebels = pilots.filter(pilot => pilot.faction === "Rebels");
+  const empire = pilots.filter(pilot => pilot.faction === "Empire");
+
+  console.log("Rebels - ", rebels, "Empire - ", empire);
