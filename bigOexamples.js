@@ -79,3 +79,14 @@ function double(array) {
   return result;
 }
 //O(n) space - array gets lopnger proportionally
+
+// big O of Objects - Insert, Removal, Access O(1), Search O(n)
+//Object.keys - O(n)
+//Object.values - O(n)
+//Object.entries - O(n)
+//hasOwnProperty - O(1)
+
+//Arrays - Search O(n), Access O(1), insertion/removal - depends, inserting/removing at the beginning - O(n)
+// push/pop O(1)
+// shift/unshift/concat/slice/splice/loops O(n)
+// sort O(n*log n)
