@@ -59,3 +59,23 @@ function atMost5(n) {
   }
 }
 // O(1) - depends on 5
+
+// Space complexity
+// booleans, numbers, undefined, null = constant space O(1);
+function sum(array) {
+  let result = 0;
+  for (let i = 1; i <= array.length; i++) {
+    result += array[i];
+  }
+  return result;
+}
+//O(1) space -> 2 variables
+
+function double(array) {
+  let result = [];
+  for (let i = 1; i <= array.length; i++) {
+    result.push(2 * array[i]);
+  }
+  return result;
+}
+//O(n) space - array gets lopnger proportionally
