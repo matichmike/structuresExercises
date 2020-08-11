@@ -32,3 +32,34 @@ function factorial(num) {
   if(num === 1) return 1;
   return num * factorial(num-1);
 }
+
+// helper method recursion
+
+function collectOdds(arr) {
+  let result = [];
+  function helper(helperInput) {
+    if(helperInput.length === 0) {
+      return;
+    }
+    if(helperInput[0] % 2 !== 0) {
+      result.push(helperInput[0])
+    }
+    helperInput(helperInput.slice(1))
+    // the first element is taken out of the array each time
+  }
+  helper(arr);
+  return result;
+}
+
+// pure recursion method
+function collectOdds(arr) {
+  let newArr = [];
+  if (arr.length === 0) {
+    return newArr;
+  }
+  if(arr[0] % 2 !== 0) {
+    newArr.push(arr[0]);
+  }
+  newArr = newArr.concat(collectOdds(arr.slice(1)));
+  return newArr;
+}
