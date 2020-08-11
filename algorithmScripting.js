@@ -141,15 +141,18 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);
 // function that returns counts of each char in a given string
 // charCount("hello") -> {h:1, e:1, l:2, o:1}
 function charCount(str) {
-  let result = {}
+  let result = {};
+  let lowerStr = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLowerCase();
-    if (result[char] > 0) {
-    result[char]++;
-  } else {
-    result[char] = 1;
+      if (/[a-z0-9]/.test(lowerStr[i])) {
+      if (!result[lowerStr[i]]) {
+          result[lowerStr[i]] = 1;
+      } else {
+         result[lowerStr[i]]++;
+      }
+      }
   }
-}
   return result;
 }
-console.log(charCount("Hello"))
+
+console.log(charCount("Hello hey"))
