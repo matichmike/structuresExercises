@@ -137,3 +137,19 @@ function chunkArrayInGroups(arr, size) {
   return result;
 }
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+// function that returns counts of each char in a given string
+// charCount("hello") -> {h:1, e:1, l:2, o:1}
+function charCount(str) {
+  let result = {}
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i].toLowerCase();
+    if (result[char] > 0) {
+    result[char]++;
+  } else {
+    result[char] = 1;
+  }
+}
+  return result;
+}
+console.log(charCount("Hello"))
