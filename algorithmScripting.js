@@ -218,3 +218,58 @@ function validAnagram(first, second) {
   return true;
 }
 console.log('anagram is', validAnagram('anagram', 'nagaram'))
+
+// sumZero function - return the array with first pair of given array that sums to 0
+// O(n^2) solution
+function sumZero(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i+1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === 0) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+}
+
+//O(n) solution
+function sumZero2(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) {
+      return [arr[left], arr[right]];
+    } else if (sum > 0) {
+      right --;
+    } else {
+      left++;
+    }
+  }
+}
+
+// countUniqueValues accepts sorted arr and counts unique vals, can have negative numbers
+
+
+//new Set solution
+function countUniqueValues(array){
+  const uniqueArr = Array.from(new Set(array));
+   if(uniqueArr.length < 2) {
+       return 0;
+   }
+   return uniqueArr.length;
+  }
+
+  // double pointers solution
+  function countUniqueValues(arr){
+    if(arr.length === 0) {
+      return 0;
+    }
+    let i = 0;
+    for (let j = 1; j < arr.length; j++) {
+      if (arr[i] !== arr[j]) {
+        i++;
+        arr[i] = arr[j];
+      }
+    }
+    return i + 1;
+  }
