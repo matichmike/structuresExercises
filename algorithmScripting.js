@@ -330,3 +330,6 @@ function search(array, val) {
 
 // one liner pangram check
 const isPangramm = (string) => ((Array.from(new Set(string.toUpperCase().replace(/[^a-zA-Z]/g, "")))).length) === 26 ? "yup": "nope";
+
+// the first distinct value in array
+const result = (array) => array.find(x => array.indexOf(x) === array.lastIndexOf(x));
