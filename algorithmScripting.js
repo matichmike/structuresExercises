@@ -328,3 +328,5 @@ function search(array, val) {
   return -1;
 }
 
+// one liner pangram check
+const isPangramm = (string) => ((Array.from(new Set(string.toUpperCase().replace(/[^a-zA-Z]/g, "")))).length) === 26 ? "yup": "nope";
