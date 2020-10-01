@@ -348,3 +348,19 @@ outer: for (let i = 0; i < 3; i++) {
   }
 }
 alert('Done!')
+
+// grouping cases
+let argument = prompt('Enter a number');
+switch (argument) {
+  case '0':
+  case '1':
+    alert('One or zero');
+    break;
+
+  case '2':
+    alert('Two');
+    break;
+
+  default:
+    alert('Undefined');
+}
