@@ -333,3 +333,9 @@ const isPangramm = (string) => ((Array.from(new Set(string.toUpperCase().replace
 
 // the first distinct value in array
 const result = (array) => array.find(x => array.indexOf(x) === array.lastIndexOf(x));
+
+// odd numbers alert with continue
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) continue;
+  alert(i);
+}
