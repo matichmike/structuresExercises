@@ -379,3 +379,21 @@ function isPrime(n) {
   }
   return true;
 }
+
+// arrow fn reformat
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+// ask(
+//   "Are you sure?",
+//   function() { alert("You have confirmed the script execution"); },
+//   function() { alert("You have cancelled the script execution"); }
+// );
+
+ask(
+  "Are you sure",
+  () => alert("You have confirmed the script execution"),
+  () => alert("You have cancelled the script execution")
+);
