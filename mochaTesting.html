@@ -21,7 +21,11 @@
 
   <script>
     function pow(x, n) {
-      return x ** n;
+      let result = 1;
+      for (let i = 0; i < n; i++) {
+        result *= x;
+      }
+      return result;
     }
   </script>
 
@@ -29,13 +33,16 @@
   <script>
     describe("pow", function() {
 
-      it("2 power 3 = 8", function() {
-      assert.equal(pow(2, 3), 8);
+      function makeTest(x) {
+    let expected = x * x * x;
+    it(`${x} in power 3 will be ${expected}`, function() {
+      assert.equal(pow(x, 3), expected);
     });
+  }
 
-    it("3 power 4 = 81", function() {
-    assert.equal(pow(3, 4), 81);
-  });
+  for (let x = 1; x <= 5; x++) {
+    makeTest(x);
+  }
 
     });
   </script>
