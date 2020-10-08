@@ -397,3 +397,10 @@ ask(
   () => alert("You have confirmed the script execution"),
   () => alert("You have cancelled the script execution")
 );
+
+// assertion example
+describe("pow", function(){
+  it("power n", function() {
+    assert.equal(pow(2,3), 8);
+  });
+});
