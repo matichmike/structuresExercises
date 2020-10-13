@@ -40,19 +40,19 @@
     it(`${x} in power 3 will be ${expected}`, function() {
       assert.equal(pow(x, 3), expected);
     });
-    it("returns NaN for negative n", function() {
-      assert.isNaN(pow(2, -1));
-    });
-    it("returns NaN for float n", function() {
-      assert.isNaN(pow(2, 1.5));
-    })
+    
   }
 
   for (let x = 1; x <= 5; x++) {
     makeTest(x);
   }
       })
-     
+      it("returns NaN for negative n", function() {
+      assert.isNaN(pow(2, -1));
+    });
+    it("returns NaN for float n", function() {
+      assert.isNaN(pow(2, 1.5));
+    })
 
     });
   </script>
