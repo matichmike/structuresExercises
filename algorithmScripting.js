@@ -478,3 +478,8 @@ let accumulator = new Accumulator(1);
 accumulator.read();
 accumulator.read();
 alert(accumulator.value)
+
+// script that shows the sum of 2 inputs
+let a = +prompt("first num?", "");
+let b = +prompt("second num?", "");
+alert(a + b);
