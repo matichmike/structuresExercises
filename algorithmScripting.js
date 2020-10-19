@@ -483,3 +483,17 @@ alert(accumulator.value)
 let a = +prompt("first num?", "");
 let b = +prompt("second num?", "");
 alert(a + b);
+
+//correctly rounding 6.35
+alert(Math.round(6.35 * 10)/10);
+
+// prompt the user for number until the number is received
+function readNumber() {
+  let num;
+  do {
+    num = prompt("Enter a num", 0);
+  } while (!isFinite(num));
+
+  if(num === null || num === '') return null;
+  return +num;
+};
