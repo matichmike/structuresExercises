@@ -510,3 +510,14 @@ function randomInt(min, max) {
   return Math.floor(rand);
 }
 alert(randomInt(1,5));
+
+// string search - all indexes
+let str = "Hey Hey";
+let target = "Hey";
+let pos = 0;
+while(true) {
+  let foundPos = str.indexOf(target, pos);
+  if (foundPos == -1) break;
+  alert(`found here: ${foundPos}`);
+  pos = foundPos + 1;
+}
