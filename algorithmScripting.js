@@ -497,3 +497,16 @@ function readNumber() {
   if(num === null || num === '') return null;
   return +num;
 };
+
+// random number between the two parameters
+function random(min, max) {
+  return min + Math.random() * (max - min);
+};
+alert(random(1,5));
+
+// random integer between the two params
+function randomInt(min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+alert(randomInt(1,5));
