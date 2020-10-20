@@ -527,3 +527,8 @@ function checkSpam(str, keyword1, keyword2) {
   let lowerStr = str.toLowerCase();
   return lowerStr.includes(keyword1) || lowerStr.includes(keyword2);
 }
+
+// truncate
+function truncate(str, maxLength) {
+  return (str.length > maxLength) ? str.slice(0, maxLength - 1) + '...' : str;
+}
