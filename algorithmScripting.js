@@ -532,3 +532,6 @@ function checkSpam(str, keyword1, keyword2) {
 function truncate(str, maxLength) {
   return (str.length > maxLength) ? str.slice(0, maxLength - 1) + '...' : str;
 }
+
+// extract cur
+function extractCurVal(str) {return +str.slice(1);};
