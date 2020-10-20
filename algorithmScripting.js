@@ -521,3 +521,9 @@ while(true) {
   alert(`found here: ${foundPos}`);
   pos = foundPos + 1;
 }
+
+// spam filter on keywords
+function checkSpam(str, keyword1, keyword2) {
+  let lowerStr = str.toLowerCase();
+  return lowerStr.includes(keyword1) || lowerStr.includes(keyword2);
+}
