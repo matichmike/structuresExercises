@@ -88,3 +88,19 @@ let myNestedArray = [
   ['mutate', 1327.98, 'splice', 'slice', 'push'],
   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
 ];
+
+//arr suminput
+function sumInput() {
+  let numbers = [];
+  while(true) {
+    let value = prompt("Enter value", 0);
+
+    if (value === '' || value === null || !isFinite(value)) break;
+    numbers.push(+value);
+  }
+  let sum = 0;
+  for (let number of numbers) {
+    sum += number;
+  }
+  return sum;
+}
