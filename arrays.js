@@ -181,3 +181,10 @@ function Calculator() {
 let newCalc = new Calculator;
 newCalc.addMethod("**", (a,b) => a ** b);
 console.log(newCalc.calculate("2 ** 2"));
+
+// converting objects to arr
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+let users = [vasya, petya, masha];
+let names = users.map(item => item.name);
