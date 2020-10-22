@@ -154,3 +154,8 @@ function filterRangeInPlace(arr, a, b) {
     }
   }
 }
+
+// sorted arr copy
+function copySorted(arr) {
+  return arr.slice().sort();
+}
