@@ -211,3 +211,8 @@ let arr = [ vasya, petya, masha ];
 function sortByAge(arr) {
   arr.sort((a,b) => a.age > b.age ? 1 : -1)
 };
+
+// avg age
+function getAvgAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length
+}
