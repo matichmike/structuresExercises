@@ -178,3 +178,6 @@ function Calculator() {
     this.methods[name] = func;
   }
 }
+let newCalc = new Calculator;
+newCalc.addMethod("**", (a,b) => a ** b);
+console.log(newCalc.calculate("2 ** 2"));
