@@ -150,3 +150,8 @@ function sumSalaries(salaries) {
   }
   return sum;
 }
+
+// the same with a reducer
+function sumSalaries(salaries) {
+  return Object.values(salaries).reduce((a,b) => a + b, 0)
+}
