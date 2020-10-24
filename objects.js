@@ -134,3 +134,19 @@ userObj.data.friends.push(friend);
 return userObj.data.friends;
 }
 console.log(addFriend(user, 'Pete'));
+
+// sum salaries obj
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+function sumSalaries(salaries) {
+  let sum = 0;
+  for (let salary of Object.values(salaries)) {
+    sum += salary;
+  }
+  return sum;
+}
