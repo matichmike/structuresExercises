@@ -33,3 +33,19 @@ function shipGenerator(options ={}) {
 
 console.log(shipGenerator());
 console.log(shipGenerator({cannons: 0}))
+
+// destructuring fn example
+let options = {
+  title: "my Menu",
+  items: ["item 1", "item 2"]
+};
+
+function showMenu({
+  title = "Untitled",
+  width: w = 100,
+  height: h = 200,
+  items: [item1, item2]
+}) {
+  return(`${title} ${w} ${h} ${item1} ${item2}`)
+}
+console.log(showMenu(options));
