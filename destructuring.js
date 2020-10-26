@@ -49,3 +49,10 @@ function showMenu({
   return(`${title} ${w} ${h} ${item1} ${item2}`)
 }
 console.log(showMenu(options));
+
+// destructuring example
+let user = {
+  name: "John",
+  years: 30
+};
+let {name, years: age, isAdmin = false} = user;
