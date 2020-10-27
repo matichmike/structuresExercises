@@ -15,3 +15,10 @@ function getDateAgo(date, days) {
 }
 let date = new Date(2015, 0, 2);
 console.log(getDateAgo(date, 365));
+
+//getLastDayOfMonth
+function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+  return date.getDate();
+}
+console.log(getLastDayOfMonth(2013, 1))
