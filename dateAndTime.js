@@ -22,3 +22,11 @@ function getLastDayOfMonth(year, month) {
   return date.getDate();
 }
 console.log(getLastDayOfMonth(2013, 1))
+
+//getSecondsToday
+function getSecondsToday() {
+  let now = new Date();
+  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let diff = now - today;
+  return Math.round(diff/1000);
+}
