@@ -63,3 +63,12 @@ function collectOdds(arr) {
   newArr = newArr.concat(collectOdds(arr.slice(1)));
   return newArr;
 }
+
+// pow recursion example
+function pow(x,n) {
+  if (n == 1) {
+    return x;
+  } else {
+    return x * pow(x, n - 1);
+  }
+}
