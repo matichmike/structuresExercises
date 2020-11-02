@@ -535,3 +535,15 @@ function truncate(str, maxLength) {
 
 // extract cur
 function extractCurVal(str) {return +str.slice(1);};
+
+// named function expression
+let sayHi = function func(who) }
+if (who) {
+  alert(`Hello, ${who}`);
+} else {
+  func("Guest");
+}
+
+let welcome = sayHi;
+sayHi = null;
+welcome();
