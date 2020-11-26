@@ -101,3 +101,17 @@ class ExtendedClock extends Clock {
     }, this.precision);
   }
 }
+
+// class FormatError
+class FormatError extends SyntaxError {
+  constructor(message) {
+    super(message);
+    this.name = "FormatError";
+  }
+}
+
+let err = new FormatError("error of formatting");
+alert(err.message); // error of formatting
+alert(err.name); // FormatError
+alert(err.stack); // stack
+alert(err instanceof SyntaxError); // true
